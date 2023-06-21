@@ -221,6 +221,11 @@ namespace EmployeeManagement.BusinessEngine.Implementaion
 
             return "24fc1fa0-ebd8-4679-8b54-93d9a5bd349b";
         }
+
+        public object GetWorkOrderDetailById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 #endregion

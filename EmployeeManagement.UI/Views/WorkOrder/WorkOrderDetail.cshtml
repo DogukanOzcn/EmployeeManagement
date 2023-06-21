@@ -1,0 +1,43 @@
+﻿@model WorkOrderDetailViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Order Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Work Order Detail</h2>
+
+        <table class="table">
+            <tr>
+                <th>Work Order ID</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Work Order Number</th>
+                <td>@Model.WorkOrderNumber</td>
+            </tr>
+            <tr>
+                <th>Assign Employee</th>
+                <td>@Model.AssignEmployeeName</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>@Model.Description</td>
+            </tr>
+            <tr>
+                <th>Due Date</th>
+                <td>@Model.DueDate.ToShortDateString()</td>
+            </tr>
+            <!-- Diğer iş emri detayları için gerekli tablo satırlarını buraya ekleyebilirsiniz -->
+        </table>
+
+        <p>
+            <a class="btn btn-primary" asp-controller="WorkOrder" asp-action="Index">Back to List</a>
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script

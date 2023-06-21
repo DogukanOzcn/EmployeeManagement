@@ -49,7 +49,7 @@
 </head>
 
 <body class="no-skin">
-    <div id="navbar" class="navbar navbar-default ace-save-state" style="height:46px;">
+    <div id="navbar" class="navbar navbar-default ace-save-state" style="height:46px; background-color: #FFB752;">
         <div class="navbar-container ace-save-state " id="navbar-container">
             <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
                 <span class="sr-only">Toggle sidebar</span>
@@ -62,11 +62,12 @@
             </button>
 
             <div class="navbar-header pull-left">
-                <a href="index.html" class="navbar-brand">
-                    <small>
-                        <i class="fa fa-leaf"></i>
-                        Çalışan İzin Takip Sistemi
-                    </small>
+                <a href="https://localhost:44305/" class="navbar-brand">
+                        <small>
+                            <i class="fa fa-users"></i>
+                            Çalışan Takip Sistemi
+                        </small>
+                    </span>
                 </a>
             </div>
 
@@ -97,7 +98,7 @@
                         <li class="">
                             <a asp-controller="EmployeeLeaveTypes" asp-action="Index">
                                 <i class="menu-icon fa fa-caret-right"></i>
-                                Çalışan İzin Tipi
+                                İzin Tipi Listesi
                             </a>
                             <b class="arrow"></b>
                         </li>
@@ -105,7 +106,7 @@
                         <li class="">
                             <a asp-controller="EmployeeLeaveAssign" asp-action="Index">
                                 <i class="menu-icon fa fa-caret-right"></i>
-                                İzin Talep Listesi
+                                İzin Onaylama
                             </a>
                             <b class="arrow"></b>
                         </li>
@@ -121,15 +122,16 @@
                     <li class="">
                         <a asp-controller="EmployeeLeaveRequest" asp-action="Index">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            Çalışan İzin Talebi
+                            İzin Talep 
                         </a>
                         <b class="arrow"></b>
                     </li>
                     <li class="">
                         <a asp-controller="Employee" asp-action="Index">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            İş Emirleri Listesi
+                            İş Emirleri Listesi  
                         </a>
+                        <br />
                         <b class="arrow"></b>
                     </li>
                 }
@@ -145,15 +147,15 @@
 
         <div class="main-content">
             <div class="main-content-inner">
-                <div class="breadcrumbs ace-save-state" id="breadcrumbs">
-                    <div class="nav-search" id="nav-search">
+                @*<div class="breadcrumbs ace-save-state" id="breadcrumbs">*@
+                    <@*div class="nav-search" id="nav-search">
                         <form class="form-search">
                             <span class="input-icon">
                                 <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
                                 <i class="ace-icon fa fa-search nav-search-icon"></i>
                             </span>
                         </form>
-                    </div><!-- /.nav-search -->
+                    </div><!-- /.nav-search -->*@
                 </div>
                 <div class="page-content">
                     <div class="ace-settings-container" id="ace-settings-container">
@@ -166,7 +168,7 @@
                                 <div class="ace-settings-item">
                                     <div class="pull-left">
                                         <select id="skin-colorpicker" class="hide">
-                                            <option data-skin="no-skin" value="#438EB9">#438EB9</option>
+                                            <option data-skin="no-skin" value="#438EB9">#438EB9</option>                                           
                                             <option data-skin="skin-1" value="#222A2D">#222A2D</option>
                                             <option data-skin="skin-2" value="#C6487E">#C6487E</option>
                                             <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
@@ -237,12 +239,12 @@
             <div class="footer-inner">
                 <div class="footer-content">
                     <span class="bigger-120">
-                        <span class="blue bolder">Ace</span>
-                        Application &copy; 2013-2014
+                        <span class="blue bolder"></span>
+                       Çalışan Takip Sistemi 2023
                     </span>
 
                     &nbsp; &nbsp;
-                    <span class="action-buttons">
+                  @*  <span class="action-buttons">
                         <a href="#">
                             <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
                         </a>
@@ -254,7 +256,7 @@
                         <a href="#">
                             <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
                         </a>
-                    </span>
+                    </span>*@
                 </div>
             </div>
         </div>

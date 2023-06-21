@@ -27,7 +27,7 @@ namespace EmployeeManagement.Common.EmailOperationModels
         private Task Execute(string sendGridApiKey, string subject, string message, string email)
         {
             var client = new SendGridClient(sendGridApiKey);
-            var from = new EmailAddress("ertugrulyilmaz@noktaatisi.com", "Çalışan Takip Sistemi");
+            var from = new EmailAddress("ozcandogukan022@gmail.com", "Çalışan Takip Sistemi");
             var to = new EmailAddress(email, "Son Kullanıcı");
             var msg = MailHelper.CreateSingleEmail(from, to, subject, "", message);
             return client.SendEmailAsync(msg);

@@ -11,6 +11,10 @@
             <h5 class="widget-title bigger lighter">
                 <i class="ace-icon fa fa-table"></i>
                 Atanmış
+                <span style="display: inline-block; width: 300px;"></span>
+                <a href="mailto:ozcandogukan022@gmail.com?subject=Verilen İş Hakkında&amp;body=Verilen İşi Onaylıyorum / Onaylamıyorum&amp;from=furuko@gmail.com" class="mail-button" style="background-color: white; color: black; font-weight: bold;">
+                    E-posta Gönder
+                </a>
             </h5>
         </div>
         <div class="widget-body">
@@ -19,12 +23,12 @@
                     <thead class="thin-border-bottom">
                         <tr>
                             <th>
-                                <i class="ace-icon fa fa-user"></i>
-                                User
+                                <i class="ace-icon fa fa-newspaper-o"></i>
+                                Acıklama
                             </th>
                             <th>
                                 <i></i>
-                                İş Emri No
+                                Olusturuldugu Tarih
                             </th>
                             <th class="hidden-480">Puan</th>
                         </tr>
@@ -34,11 +38,12 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td class="">@item.AssignEmployeeName</td>
+                                <td class="">@item.WorkOrderDescription</td>
 
-                                <td>
+                               @* <td>
                                     <a asp-controller="WorkOrder" asp-action="WorkOrderDetail" asp-route-id="@item.Id">@item.WorkOrderNumber</a>
-                                </td>
+                                </td>*@
+                                <td class="">@item.WorkOrderNumber</td>
 
                                 <td class="hidden-480">
                                     <span class="label label-warning">@item.WorkOrderPoint</span>
@@ -46,6 +51,8 @@
                             </tr>
                         }
                     </tbody>
+
+
                 </table>
             </div>
         </div>

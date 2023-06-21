@@ -13,5 +13,6 @@ namespace EmployeeManagement.BusinessEngine.Contracts
         Result<WorkOrderVM> EditWorkOrder(WorkOrderVM editModel);
         Result<bool> RemoveWorkOrder(int id);
         Result<List<WorkOrderVM>> GetWorkOrderByEmployeeId(string employeeId);
+        object GetWorkOrderDetailById(int id);
     }
 }
